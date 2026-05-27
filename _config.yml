@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Atilla Celikgil / Perso"
+title                    : ""
 title_separator          : "-"
 name                     : &name "Atilla Celikgil"
 description              : &description "Atilla Celikgil's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -23,7 +23,7 @@ repository               : "urbeevol/atillacelikgil.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "pp.jpeg"
   name             : "Atilla"
   pronouns         : # example: "she/her"  
   bio              : "Solving nature's problems, and coming up with more."
