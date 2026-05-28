@@ -22,6 +22,18 @@ $navicon-link-color-hover: mix(#fff, $background-color, 80%) !default;
 $notice-background-mix: 95% !default;
 $code-notice-background-mix: 98% !default;
 
+/* Additional colors needed by mixins */
+$warning-color: #e68a00 !default;
+$error-color: #e62e00 !default;
+$success-color: #00aa3a !default;
+$info-color: #2a8acc !default;
+
+/* Notice background colors */
+$warning-background-color: mix($warning-color, $background-color, 15%) !default;
+$error-background-color: mix($error-color, $background-color, 15%) !default;
+$success-background-color: mix($success-color, $background-color, 15%) !default;
+$info-background-color: mix($info-color, $background-color, 15%) !default;
+
 /* neon syntax highlighting (light theme version - base16) */
 $base00: #1a1a1a !default;      // dark text
 $base01: #2d2d2d !default;
