@@ -34,7 +34,7 @@
       {% endif %}
     </h2>
     
-    <!-- AUTHOR NAMES with auto-bolding -->
+    <!-- AUTHOR NAMES - bold your name variations -->
     {% if post.authors %}
       <p class="archive__item-excerpt" itemprop="author">
         <strong>Authors:</strong> 
@@ -43,16 +43,16 @@
         <!-- Replace common name variations (order matters - put longer ones first) -->
         {% assign authors_text = authors_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign authors_text = authors_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign authors_text = authors_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign authors_text = authors_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign authors_text = authors_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign authors_text = authors_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign authors_text = authors_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign authors_text = authors_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign authors_text = authors_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign authors_text = authors_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign authors_text = authors_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
         {% assign authors_text = authors_text | replace: 'Çelikgil, A.', '<strong>Çelikgil, A.</strong>' %}
-        {% assign authors_text = authors_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
-        {% assign authors_text = authors_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
-        {% assign authors_text = authors_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
-        {% assign authors_text = authors_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         
         {{ authors_text }}
       </p>
@@ -76,70 +76,90 @@
       <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
     
-    <!-- CITATIONS with auto-bolding -->
+    <!-- CITATIONS - bold your name variations -->
     {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
       <p>Recommended citation: 
         {% assign citation_text = post.citation %}
         {% assign citation_text = citation_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, A.', '<strong>Çelikgil, A.</strong>' %}
         {{ citation_text }}
-        <br /><a href="{{ post.paperurl }}">Read Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
+        <br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
       </p>
     {% elsif post.citation and post.paperurl and post.slidesurl %}
       <p>Recommended citation: 
         {% assign citation_text = post.citation %}
         {% assign citation_text = citation_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, A.', '<strong>Çelikgil, A.</strong>' %}
         {{ citation_text }}
-        <br /><a href="{{ post.paperurl }}">Read Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a>
+        <br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a>
       </p>
     {% elsif post.citation and post.paperurl and post.bibtexurl %}
       <p>Recommended citation: 
         {% assign citation_text = post.citation %}
         {% assign citation_text = citation_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, A.', '<strong>Çelikgil, A.</strong>' %}
         {{ citation_text }}
-        <br /><a href="{{ post.paperurl }}">Read Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
+        <br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
       </p>
     {% elsif post.citation and post.paperurl %}
       <p>Recommended citation: 
         {% assign citation_text = post.citation %}
         {% assign citation_text = citation_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, A.', '<strong>Çelikgil, A.</strong>' %}
         {{ citation_text }}
-        <br /><a href="{{ post.paperurl }}">Read Paper</a>
+        <br /><a href="{{ post.paperurl }}">Download Paper</a>
       </p>
     {% elsif post.citation and post.slidesurl and post.bibtexurl %}
       <p>Recommended citation: 
         {% assign citation_text = post.citation %}
         {% assign citation_text = citation_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
@@ -152,8 +172,12 @@
         {% assign citation_text = post.citation %}
         {% assign citation_text = citation_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
@@ -166,8 +190,12 @@
         {% assign citation_text = post.citation %}
         {% assign citation_text = citation_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
@@ -180,8 +208,12 @@
         {% assign citation_text = post.citation %}
         {% assign citation_text = citation_text | replace: 'Atilla Celikgil', '<strong>Atilla Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'Atilla Çelikgil', '<strong>Atilla Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil Atilla', '<strong>Celikgil Atilla</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil Atilla', '<strong>Çelikgil Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Celikgil', '<strong>A. Celikgil</strong>' %}
         {% assign citation_text = citation_text | replace: 'A. Çelikgil', '<strong>A. Çelikgil</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Celikgil A.', '<strong>Celikgil A.</strong>' %}
+        {% assign citation_text = citation_text | replace: 'Çelikgil A.', '<strong>Çelikgil A.</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, Atilla', '<strong>Celikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Çelikgil, Atilla', '<strong>Çelikgil, Atilla</strong>' %}
         {% assign citation_text = citation_text | replace: 'Celikgil, A.', '<strong>Celikgil, A.</strong>' %}
@@ -189,9 +221,9 @@
         {{ citation_text }}
       </p>
     {% elsif post.paperurl and post.bibtexurl %}
-      <p><a href="{{ post.paperurl }}">Read Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+      <p><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% elsif post.paperurl %}
-      <p><a href="{{ post.paperurl }}">Read Paper</a></p>
+      <p><a href="{{ post.paperurl }}">Download Paper</a></p>
     {% elsif post.slidesurl and post.bibtexurl %}
       <p><a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% elsif post.slidesurl %}
