@@ -2,9 +2,9 @@
 title: "The impact of urban development on diversity, performance and fitness of cavity-nesting Hymenoptera"
 collection: Conferences
 type: "Talk"
-permalink: /talks/2024-08-01-impact-urban-development
+permalink: /talks/2024-08-impact-urban-development
 venue: "8th Annual Meeting of German Centre for Integrative Biodiversity Research (iDiv)"
-date: 2024-08-01
+date: 2024-08
 location: "Leipzig, Germany"
 authors: "**A. Celikgil**, P. Theodorou"
 ---
