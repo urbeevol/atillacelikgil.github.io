@@ -2,9 +2,9 @@
 title: "The impact of urbanisation on diversity, performance and fitness of cavity-nesting Hymenoptera: insights from a large-scale citizen science project"
 collection: Conferences
 type: "Talk"
-permalink: /talks/2024-06-impact-urbanisation-citizen-science
+permalink: /talks/2024-06-01-impact-urbanisation-citizen-science
 venue: "7th European Congress of Conservation Biology (ECCB)"
-date: 2024-06
+date: 2024-06-01
 location: "Bologna, Italy"
 authors: "P. Theodorou, **A. Celikgil**"
 ---
