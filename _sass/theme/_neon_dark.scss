@@ -1,38 +1,61 @@
 /* ==========================================================================
-   Neon Dark skin
+   NEON THEME - DARK VERSION
    ========================================================================== */
 
-/* Colors */
-$background-color: #141010 !default;
-$text-color: #fff6fb !default;
-$primary-color: #f21368 !default;
-$border-color: mix(#fff, $background-color, 20%) !default;
-$code-background-color: mix(#000, $background-color, 15%) !default;
-$code-background-color-dark: mix(#000, $background-color, 20%) !default;
-$form-background-color: mix(#000, $background-color, 15%) !default;
-$footer-background-color: mix($primary-color, #000, 10%) !default;
-$link-color: $primary-color !default;
-$link-color-hover: mix(#fff, $link-color, 25%) !default;
-$link-color-visited: mix(#000, $link-color, 25%) !default;
-$masthead-link-color: $text-color !default;
-$masthead-link-color-hover: mix(#000, $text-color, 20%) !default;
-$navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
+/* Color codes */
+$primary-color: #f21368;
+$dark-primary-color: mix(#000, $primary-color, 40%);
+$darker-primary-color: mix(#000, $primary-color, 60%);
+$light-primary-color: mix(#fff, $primary-color, 50%);
 
-/* notices */
+$background: #141010;
+$background-light: mix(#fff, $background, 20%);
+$background-lighter: mix(#fff, $background, 90%);
+$text: #fff6fb;
+$footer: mix(#000, $background, 30%);
+
+/* Notice and status colors (required by mixins) */
+$danger-color: #ff3300;
+$info-color: #33aaff;
+$notice-color: #7a8288;
+$success-color: #00cc44;
+$warning-color: #ff8800;
+
+/* Other basic settings */
+$border-radius: 4px;
+$box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition: all 0.2s ease-in-out;
+$masthead-height: 70px;
+$navicon-width: 28px;
+$navicon-height: 4px;
+$sidebar-link-max-width: 250px;
+$sidebar-screen-min-width: 1024px;
+
+/* Base colors using CSS custom properties */
+$background-color: $background !default;
+$text-color: $text !default;
+$border-color: $light-primary-color !default;
+$code-background-color: mix(#000, $background, 15%) !default;
+$code-background-color-dark: mix(#000, $background, 20%) !default;
+$form-background-color: mix(#000, $background, 15%) !default;
+$footer-background-color: $footer !default;
+$link-color: mix($primary-color, $text, 40%) !default;
+$link-color-hover: mix(#000, $link-color, 25%) !default;
+$link-color-visited: mix(#fff, $link-color, 25%) !default;
+$masthead-link-color: $text !default;
+$masthead-link-color-hover: $primary-color !default;
+$navicon-link-color-hover: mix(#000, $background, 30%) !default;
+
+/* Notices */
 $notice-background-mix: 90% !default;
 $code-notice-background-mix: 95% !default;
 
-/* Additional colors needed by mixins */
-$warning-color: #ff8800 !default;
-$error-color: #ff3300 !default;
-$success-color: #00cc44 !default;
-$info-color: #33aaff !default;
-
 /* Notice background colors */
-$warning-background-color: mix($warning-color, $background-color, 10%) !default;
-$error-background-color: mix($error-color, $background-color, 10%) !default;
-$success-background-color: mix($success-color, $background-color, 10%) !default;
-$info-background-color: mix($info-color, $background-color, 10%) !default;
+$danger-background-color: mix($danger-color, $background, 10%) !default;
+$info-background-color: mix($info-color, $background, 10%) !default;
+$notice-background-color: mix($notice-color, $background, 10%) !default;
+$success-background-color: mix($success-color, $background, 10%) !default;
+$warning-background-color: mix($warning-color, $background, 10%) !default;
 
 /* neon syntax highlighting (base16) */
 $base00: #ffffff !default;
@@ -52,24 +75,48 @@ $base0d: #3777e6 !default;
 $base0e: #ad00a1 !default;
 $base0f: #cc6633 !default;
 
+/* Dark theme CSS custom properties */
+html[data-theme="dark"] {
+    --global-base-color: #{$primary-color};
+    --global-bg-color: #{$background};
+    --global-footer-bg-color: #{$footer};
+    --global-border-color: #{$light-primary-color};
+    --global-dark-border-color: #{$background-light};
+    --global-code-background-color: #fafafa;
+    --global-code-text-color: #{$darker-primary-color};
+    --global-fig-caption-color: #{$light-primary-color};
+    --global-link-color: #{$link-color};
+    --global-link-color-hover: #{$link-color-hover};
+    --global-link-color-visited: #{$link-color-visited};
+    --global-masthead-link-color: #{$text};
+    --global-masthead-link-color-hover: #{$primary-color};
+    --global-text-color: #{$text};
+    --global-text-color-light: #{$light-primary-color};
+    --global-thead-color: #{$background-lighter};
+    --global-danger-color: #{$danger-color};
+    --global-info-color: #{$info-color};
+    --global-notice-color: #{$notice-color};
+    --global-success-color: #{$success-color};
+    --global-warning-color: #{$warning-color};
+}
+
 .author__urls.social-icons i,
 .author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa  {
-  color: inherit;
+.page__footer-follow .social-icons .svg-inline--fa {
+    color: inherit;
 }
 
-/* next/previous buttons */
 .pagination--pager {
-  color: $text-color;
-  background-color: $primary-color;
-  border-color: transparent;
-
-  &:visited {
     color: $text-color;
-  }
+    background-color: $primary-color;
+    border-color: transparent;
+
+    &:visited {
+        color: $text-color;
+    }
 }
 
 .ais-search-box .ais-search-box--input {
-  background-color: $form-background-color;
+    background-color: $form-background-color;
 }
