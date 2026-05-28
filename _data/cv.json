@@ -123,66 +123,6 @@
     }
   ],
   "references": [],
-  "publications": [
-    {
-      "name": "Prey and prejudice: predation by the European bee-eater Merops apiaster has species-specific effects on the ecology and genetics of bumblebees",
-      "publisher": "",
-      "releaseDate": "2025",
-      "website": "",
-      "summary": "Belinda Kahnt, Andreas Etel, Felix Jarosch, Oliver Schweiger, Atilla Çelikgil, Panagiotis Theodorou"
-    },
-    {
-      "name": "Urban intensity reshapes Hymenoptera communities and decouples nesting from reproduction",
-      "publisher": "bioRxiv (PREPRINT) / Under review at Nature Cities",
-      "releaseDate": "2025",
-      "website": "",
-      "summary": "Çelikgil A., Henzschel L., Sänger J., Krause P., Nemetschek A., Husemann M., Theodorou P."
-    }
-  ],
-  "presentations": [
-    {
-      "name": "The impact of urban development on diversity, performance and fitness of cavity-nesting Hymenoptera",
-      "event": "8th Annual Meeting of German Centre for Integrative Biodiversity Research (iDiv)",
-      "date": "2024",
-      "location": "Leipzig, Germany",
-      "description": "Authors: A. Celikgil, P. Theodorou"
-    },
-    {
-      "name": "Insects in cities: A within-cityscape ecological systems approach to reveal the mechanistic processes that shape urban flying insect communities?",
-      "event": "7th European Congress of Conservation Biology (ECCB)",
-      "date": "2024",
-      "location": "Bologna, Italy",
-      "description": "Authors: A. Celikgil, A. Schmidt, P. Theodorou"
-    },
-    {
-      "name": "The impact of urbanisation on diversity, performance and fitness of cavity-nesting Hymenoptera: insights from a large-scale citizen science project",
-      "event": "7th European Congress of Conservation Biology (ECCB)",
-      "date": "2024",
-      "location": "Bologna, Italy",
-      "description": "Authors: P. Theodorou, A. Celikgil"
-    },
-    {
-      "name": "How do local resources and landscape heterogeneity affect flying insect communities in cities?",
-      "event": "52nd Annual Meeting of the Ecological Society of Germany, Austria and Switzerland (GfÖ)",
-      "date": "2023",
-      "location": "Leipzig, Germany",
-      "description": "Authors: A. Celikgil, A. Schmidt, P. Theodorou"
-    },
-    {
-      "name": "The effects of urban landscape heterogeneity on cavity-nesting Hymenoptera",
-      "event": "52nd Annual Meeting of the Ecological Society of Germany, Austria and Switzerland (GfÖ)",
-      "date": "2023",
-      "location": "Leipzig, Germany",
-      "description": "Authors: A. Celikgil, J. Sänger, A. Nemetschek, P. Theodorou (Poster)"
-    },
-    {
-      "name": "Phylogeography of Turkish honeybees (Apis mellifera L.) based on microsatellite markers",
-      "event": "6th Ecology and Evolutionary Biology Symposium",
-      "date": "2019",
-      "location": "Ankara, Turkey",
-      "description": "Authors: A. Celikgil, M. Kükrer, C. C. Bilgin (Poster)"
-    }
-  ],
   "teaching": [
     {
       "course": "Group Research Colloquium in General Zoology",
