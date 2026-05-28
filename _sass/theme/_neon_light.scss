@@ -1,75 +1,122 @@
 /* ==========================================================================
-   Neon Light skin
+   NEON THEME - LIGHT VERSION
    ========================================================================== */
 
-/* Colors - Light version */
-$background-color: #faf8f5 !default;
-$text-color: #1a1a1a !default;
-$primary-color: #e0115f !default;  // Slightly toned down neon pink for light mode
-$border-color: mix(#000, $background-color, 15%) !default;
-$code-background-color: mix(#fff, $background-color, 50%) !default;
-$code-background-color-dark: mix(#000, $background-color, 10%) !default;
+/* Color codes */
+$primary-color: #e0115f;
+$dark-primary-color: mix(#000, $primary-color, 40%);
+$darker-primary-color: mix(#000, $primary-color, 60%);
+$light-primary-color: mix(#fff, $primary-color, 50%);
+
+$background: #faf8f5;
+$background-light: mix(#000, $background, 20%);
+$background-lighter: mix(#000, $background, 90%);
+$text: #1a1a1a;
+$footer: mix($primary-color, $background, 8%);
+
+/* Notice and status colors (required by mixins) */
+$danger-color: #e62e00;
+$info-color: #2a8acc;
+$notice-color: #7a8288;
+$success-color: #00aa3a;
+$warning-color: #e68a00;
+
+/* Other basic settings */
+$border-radius: 4px;
+$box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition: all 0.2s ease-in-out;
+$masthead-height: 70px;
+$navicon-width: 28px;
+$navicon-height: 4px;
+$sidebar-link-max-width: 250px;
+$sidebar-screen-min-width: 1024px;
+
+/* Base colors using CSS custom properties */
+$background-color: $background !default;
+$text-color: $text !default;
+$border-color: mix(#000, $background, 15%) !default;
+$code-background-color: mix(#fff, $background, 50%) !default;
+$code-background-color-dark: mix(#000, $background, 10%) !default;
 $form-background-color: #ffffff !default;
-$footer-background-color: mix($primary-color, #fff, 8%) !default;
+$footer-background-color: $footer !default;
 $link-color: $primary-color !default;
 $link-color-hover: mix(#000, $link-color, 20%) !default;
 $link-color-visited: mix(#666, $link-color, 30%) !default;
-$masthead-link-color: $text-color !default;
+$masthead-link-color: $text !default;
 $masthead-link-color-hover: $primary-color !default;
-$navicon-link-color-hover: mix(#fff, $background-color, 80%) !default;
+$navicon-link-color-hover: mix(#fff, $background, 80%) !default;
 
-/* notices - Light version */
+/* Notices */
 $notice-background-mix: 95% !default;
 $code-notice-background-mix: 98% !default;
 
-/* Additional colors needed by mixins */
-$warning-color: #e68a00 !default;
-$error-color: #e62e00 !default;
-$success-color: #00aa3a !default;
-$info-color: #2a8acc !default;
-
 /* Notice background colors */
-$warning-background-color: mix($warning-color, $background-color, 15%) !default;
-$error-background-color: mix($error-color, $background-color, 15%) !default;
-$success-background-color: mix($success-color, $background-color, 15%) !default;
-$info-background-color: mix($info-color, $background-color, 15%) !default;
+$danger-background-color: mix($danger-color, $background, 15%) !default;
+$info-background-color: mix($info-color, $background, 15%) !default;
+$notice-background-color: mix($notice-color, $background, 15%) !default;
+$success-background-color: mix($success-color, $background, 15%) !default;
+$warning-background-color: mix($warning-color, $background, 15%) !default;
 
-/* neon syntax highlighting (light theme version - base16) */
-$base00: #1a1a1a !default;      // dark text
+/* neon syntax highlighting (light theme version) */
+$base00: #1a1a1a !default;
 $base01: #2d2d2d !default;
 $base02: #3d3d3d !default;
 $base03: #555555 !default;
 $base04: #e0e0e0 !default;
 $base05: #f5f5f5 !default;
 $base06: #fafafa !default;
-$base07: #ffffff !default;       // light background
-$base08: #e0115f !default;       // neon pink
-$base09: #fd8900 !default;       // orange
-$base0a: #aba800 !default;       // yellow/gold
-$base0b: #00a812 !default;       // green
-$base0c: #1f8a8a !default;       // teal
-$base0d: #0066cc !default;       // blue
-$base0e: #8a00a1 !default;       // purple
-$base0f: #cc6633 !default;       // brown/orange
+$base07: #ffffff !default;
+$base08: #e0115f !default;
+$base09: #fd8900 !default;
+$base0a: #aba800 !default;
+$base0b: #00a812 !default;
+$base0c: #1f8a8a !default;
+$base0d: #0066cc !default;
+$base0e: #8a00a1 !default;
+$base0f: #cc6633 !default;
+
+/* Light theme CSS custom properties */
+html[data-theme="light"] {
+    --global-base-color: #{$primary-color};
+    --global-bg-color: #{$background};
+    --global-footer-bg-color: #{$footer};
+    --global-border-color: #{$border-color};
+    --global-dark-border-color: #{$background-light};
+    --global-code-background-color: #f5f5f5;
+    --global-code-text-color: #{$darker-primary-color};
+    --global-fig-caption-color: #{$light-primary-color};
+    --global-link-color: #{$link-color};
+    --global-link-color-hover: #{$link-color-hover};
+    --global-link-color-visited: #{$link-color-visited};
+    --global-masthead-link-color: #{$text};
+    --global-masthead-link-color-hover: #{$primary-color};
+    --global-text-color: #{$text};
+    --global-text-color-light: #{$light-primary-color};
+    --global-thead-color: #{$background-lighter};
+    --global-danger-color: #{$danger-color};
+    --global-info-color: #{$info-color};
+    --global-notice-color: #{$notice-color};
+    --global-success-color: #{$success-color};
+    --global-warning-color: #{$warning-color};
+}
 
 .author__urls.social-icons i,
 .author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa  {
-  color: inherit;
+.page__footer-follow .social-icons .svg-inline--fa {
+    color: inherit;
 }
 
-/* next/previous buttons */
 .pagination--pager {
-  color: $background-color;
-  background-color: $primary-color;
-  border-color: transparent;
-
-  &:visited {
     color: $background-color;
-  }
+    background-color: $primary-color;
+    border-color: transparent;
+
+    &:visited {
+        color: $background-color;
+    }
 }
 
 .ais-search-box .ais-search-box--input {
-  background-color: $form-background-color;
+    background-color: $form-background-color;
 }
