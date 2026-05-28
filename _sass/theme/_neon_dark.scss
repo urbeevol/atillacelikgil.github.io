@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Neon skin
+   Neon Dark skin
    ========================================================================== */
 
 /* Colors */
@@ -21,6 +21,18 @@ $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
 /* notices */
 $notice-background-mix: 90% !default;
 $code-notice-background-mix: 95% !default;
+
+/* Additional colors needed by mixins */
+$warning-color: #ff8800 !default;
+$error-color: #ff3300 !default;
+$success-color: #00cc44 !default;
+$info-color: #33aaff !default;
+
+/* Notice background colors */
+$warning-background-color: mix($warning-color, $background-color, 10%) !default;
+$error-background-color: mix($error-color, $background-color, 10%) !default;
+$success-background-color: mix($success-color, $background-color, 10%) !default;
+$info-background-color: mix($info-color, $background-color, 10%) !default;
 
 /* neon syntax highlighting (base16) */
 $base00: #ffffff !default;
