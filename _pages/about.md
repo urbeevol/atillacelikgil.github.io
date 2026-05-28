@@ -11,4 +11,4 @@ I am an evolutionary ecologist investigating how global environmental change res
 
 ## Talk map
 
-[View talk map](/talkmap.html)
+<iframe src="/talkmap/map.html" height="700" width="850" style="border:none;"></iframe>
